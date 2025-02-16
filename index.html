@@ -10,7 +10,25 @@
     -->
     <link rel="stylesheet" href="style.css">
     
-    
+    <!-- Chat Button -->
+<div class="chat-button" id="chatBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+</div>
+
+<!-- Chat Window -->
+<div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <h3>Chat with Us</h3>
+        <button id="closeChat">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button id="sendMessage">Send</button>
+    </div>
+</div>
     <div class="carousel">
         <div class="carousel-item">
             <div class="carousel-box">
@@ -93,7 +111,6 @@
         <div class="box">High-end, full-service<br />visual content creation<br />for lifestyle branding.</div>
     </div>
     
-    <a href="https://www.supah.it" target="_blank" class="logo">S</a>
     <div class="social">
       <a href="#" target="_blank"
             ><svg>

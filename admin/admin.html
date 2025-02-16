@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT4B.in Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center">
+                        <img src="https://it4b.in/images/logo.svg" alt="IT4B.in Logo" class="h-8">
+                    </div>
+                    <div id="userInfo" class="flex items-center space-x-4">
+                        <span id="userName" class="text-gray-700"></span>
+                        <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded-md">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Image Management -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Image Management</h2>
+                    <div class="space-y-4">
+                        <div id="imageUpload" class="border-2 border-dashed border-gray-300 p-4 text-center">
+                            <input type="file" id="imageInput" accept="image/*" class="hidden">
+                            <label for="imageInput" class="cursor-pointer">
+                                <div class="text-gray-500">Click to upload or drag images here</div>
+                            </label>
+                        </div>
+                        <div id="imageList" class="grid grid-cols-2 gap-4">
+                            <!-- Images will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat System -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Chat System</h2>
+                    <div class="h-96 flex flex-col">
+                        <div id="chatMessages" class="flex-1 overflow-y-auto mb-4 space-y-2">
+                            <!-- Messages will appear here -->
+                        </div>
+                        <div class="flex space-x-2">
+                            <input type="text" id="messageInput" class="flex-1 border rounded-md px-4 py-2" placeholder="Type your message...">
+                            <button id="sendMessage" class="bg-blue-500 text-white px-4 py-2 rounded-md">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-storage-compat.js"></script>
+    <script src="../config/firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
